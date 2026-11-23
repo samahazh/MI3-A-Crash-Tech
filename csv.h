@@ -18,5 +18,8 @@ typedef struct {
     int nb_blesses_legers;
 } StatsAnnee;
 
+typedef struct{
+
+    
 
 
