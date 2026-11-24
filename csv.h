@@ -10,10 +10,3 @@ typedef struct {
     int motif;
 } LigneCSV;
 
-// YEAR_DATA
-typedef struct {
-    int nb_accidents;
-    int gravite[4];
-} StatsAnnee;
-
-
