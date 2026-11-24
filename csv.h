@@ -17,6 +17,6 @@ typedef struct {
     int motif;
 } DonneesLigne;
 
-int lire_donnees_csv(const char *nom_fichier, void *structure_donnees, const char *mode);
+int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee);
 
 #endif
