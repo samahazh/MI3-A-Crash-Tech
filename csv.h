@@ -8,5 +8,5 @@ typedef struct {
     int genre;
     int annee_naissance;
     int motif;
-} LigneCSV;
+} DonneesLignes;
 
