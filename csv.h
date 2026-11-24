@@ -15,7 +15,7 @@ typedef struct {
     int genre;
     int annee_naissance;
     int motif;
-} DonneesLignes;
+} DonneesLigne;
 
 int charger_donnees_csv(const char *nom_fichier,
                         void *structure_donnees,
