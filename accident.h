@@ -9,13 +9,13 @@ typedef struct Victime {
 typedef struct Vehicule {
     char id_vehicule[16];
     int motif;
-    Victime* liste_victimes;
+    DonneesVictime* liste_victimes;
     struct Vehicule* suivant;
 } DonneesVehicule;
 
 typedef struct Accident {
     long long cle;
-    Vehicule* liste_vehicules;
+    DonneesVehicule* liste_vehicules;
     struct Accident* gauche;
     struct Accident* droite;
     int equilibre;
