@@ -7,7 +7,7 @@
 
 typedef struct {
     int annee;
-    int id_accident;
+    char id_accident[16];
     char id_vehicule[16];
     int emplacement;
     int type_usager;
@@ -17,6 +17,8 @@ typedef struct {
     int motif;
 } DonneesLignes;
 
-int charger_donnees_csv(const char *nom_fichier, void *structure_donnees, const char *mode);
+int charger_donnees_csv(const char *nom_fichier,
+                        void *structure_donnees,
+                        const char *mode);
 
 #endif
