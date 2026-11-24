@@ -1,13 +1,13 @@
 # Nom de l'exécutable final :
-EXEC = programme_qcm
+EXEC = crashTech
 
 # Liste des fichiers sources à compiler :
-SRC = main.c etudiant.c enseignant.c
+SRC = main.c csv.c
 
 # Compilateur ("gcc") :
 CC = gcc
 
-# Options de compilation (avertissements de sécurité) :
+# Options de compilation :
 CFLAGS = -Wall -Wextra -std=c11
 
 # Crée l'exécutable final :
@@ -21,5 +21,8 @@ $(EXEC): $(SRC)
 clean:
 	rm -f $(EXEC)
 
-# Nettoie tout et recompile : 
+# Nettoie tout et recompile :
 re: clean all
+
+.PHONY: all clean re
+
