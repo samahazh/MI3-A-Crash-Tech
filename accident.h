@@ -4,19 +4,19 @@ typedef struct Victime {
     int genre;
     int gravite;
     struct Victime* suivant;
-} Victime;
+} DonneesVictime;
 
 typedef struct Vehicule {
     char id_vehicule[16];
     int motif;
     Victime* liste_victimes;
     struct Vehicule* suivant;
-} Vehicule;
+} DonneesVehicule;
 
-typedef struct NoeudAVL {
+typedef struct Accident {
     long long cle;
     Vehicule* liste_vehicules;
-    struct NoeudAVL* gauche;
-    struct NoeudAVL* droite;
+    struct Accident* gauche;
+    struct Accident* droite;
     int equilibre;
-} NoeudAVL;
+} DonneesAccident;
