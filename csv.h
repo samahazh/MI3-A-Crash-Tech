@@ -10,16 +10,10 @@ typedef struct {
     int motif;
 } LigneCSV;
 
+// YEAR_DATA
 typedef struct {
     int nb_accidents;
-    int nb_indemnes;
-    int nb_tues;
-    int nb_blesses_graves;
-    int nb_blesses_legers;
+    int gravite[4];
 } StatsAnnee;
-
-typedef struct{
-
-    
 
 
