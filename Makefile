@@ -24,5 +24,3 @@ clean:
 # Nettoie tout et recompile :
 re: clean all
 
-.PHONY: all clean re
-
