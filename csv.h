@@ -17,6 +17,7 @@ typedef struct {
     int motif;
 } DonneesLigne;
 
+FILE* ouvrir_fichier_csv(const char* chemin);
 int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee);
 
 #endif
