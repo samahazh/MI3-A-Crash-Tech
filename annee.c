@@ -19,6 +19,22 @@ void lancer_mode_annee(const char* chemin_fichier){
   initialiser_tableau(annees);
 
   DonneesLigne ligne;
+
+  // Lit toutes les lignes du CSV une par une
+    while (lire_ligne_csv(fichier, &ligne) == 1) {
+        // Vérifier que l'année est bien dans l'intervalle [2005, 2024]
+        if (ligne.annee >= 2005 && ligne.annee <= 2024) {
+            int index = ligne.annee - 2005;
+            
+            // Incrémenter le nombre d'accidents (ou de victimes selon ce que tu comptes)
+            annees[index].nb_accidents++;
+
+            // La gravité va de 1 à 4. On gère l'indice du tableau (0 à 3)
+            if (ligne.gravite >= 1 && ligne.gravite <= 4) {
+                annees[index].gravite[ligne.gravite - 1]++;
+            }
+        }
+    }
 }
 
 
