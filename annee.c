@@ -13,8 +13,18 @@ void initialiser_tableau(DonneesAnnee* tab){
 
 
 void afficher_stats_annee(DonneesAnnee* tab, int annee){
-  for(int i=0; i<20; i++){
-    printf("%d
+  int index = annee - 2005;
+
+  printf("\n=== Statistiques pour l'annee %d ===\n", annee);
+
 }
 
-void lancer_mode_annee(const char* chemin_fichier);
+void lancer_mode_annee(const char* chemin_fichier){
+  //ouvrir le fichier avec les données
+  FILE* fichier = ouvrir_fichier_csv(chemin_fichier);
+
+  DonneesAnnee annees[20];
+  initialiser_tableau(annees);
+
+  DonneesLigne ligne;
+}
