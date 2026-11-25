@@ -2,7 +2,7 @@
 EXEC = crashTech
 
 # Liste des fichiers sources à compiler :
-SRC = main.c csv.c annee.c
+SRC = main.c csv.c annee.c age.c accident.c
 
 # Compilateur ("gcc") :
 CC = gcc
