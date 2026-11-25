@@ -5,6 +5,4 @@ typedef struct Age {
     struct Age* suivant;
 } DonneesAge;
 
-void lancer_mode_age(const char* chemin_fichier) {
-    (void)chemin_fichier;
-}
+void lancer_mode_age(const char* chemin_fichier);
