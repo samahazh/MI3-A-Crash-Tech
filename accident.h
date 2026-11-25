@@ -20,3 +20,5 @@ typedef struct Accident {
     struct Accident* droite;
     int equilibre;
 } DonneesAccident;
+
+void lancer_mode_accident(const char* chemin_fichier);
