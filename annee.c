@@ -43,20 +43,21 @@ void lancer_mode_annee(const char* chemin_fichier){
     }
 fclose(fichier);
 
-int choix = -1; 
-while(choix != 0){
-    printf("\nEntrez une année entre 2005 et 2024 (0 pour quitter) :")
-  
+int choix = -1;
+    while (choix != 0) {
+        printf("\nEntrez une annee entre 2005 et 2024 (0 pour quitter) : ");
+        if (scanf("%d", &choix) != 1) {
+            printf("Erreur : saisie invalide.\n");
+            return;
+        }
 
-
-
-
-
-
-
-  
+        if (choix >= 2005 && choix <= 2024) {
+            afficher_stats_annee(annees, choix);
+        } else if (choix != 0) {
+            printf("Erreur : annee hors intervalle [2005, 2024].\n");
+        }
+    }
 }
-
 
 void afficher_stats_annee(DonneesAnnee* tab, int annee){
   int index = annee - 2005;
@@ -69,3 +70,4 @@ void afficher_stats_annee(DonneesAnnee* tab, int annee){
   printf("  - Blesses graves (3) : %d\n", tab[index].gravite[2]);
   printf("  - Blesses legers (4) : %d\n", tab[index].gravite[3]);
 }
+
