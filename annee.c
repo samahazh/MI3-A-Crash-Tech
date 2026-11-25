@@ -26,7 +26,7 @@ void lancer_mode_annee(const char* chemin_fichier){
         if (ligne.annee >= 2005 && ligne.annee <= 2024) {
             int index = ligne.annee - 2005;
             
-            // Incrémenter le nombre d'accidents (ou de victimes selon ce que tu comptes)
+            // Incrémenter le nombre d'accidents (ou de victimes selon ce qu'on compte)
             annees[index].nb_accidents++;
 
             // La gravité va de 1 à 4. On gère l'indice du tableau (0 à 3)
