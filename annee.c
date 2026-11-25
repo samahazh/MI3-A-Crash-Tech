@@ -19,6 +19,9 @@ void lancer_mode_annee(const char* chemin_fichier){
   initialiser_tableau(annees);
 
   DonneesLigne ligne;
+  int dernier_id = -1;
+  int derniere_annee = -1;
+
 
   // Lit toutes les lignes du CSV une par une
     while (lire_ligne_csv(fichier, &ligne) == 1) {
@@ -26,15 +29,32 @@ void lancer_mode_annee(const char* chemin_fichier){
         if (ligne.annee >= 2005 && ligne.annee <= 2024) {
             int index = ligne.annee - 2005;
             
-            // Incrémenter le nombre d'accidents (ou de victimes selon ce que l'on compte)
-            annees[index].nb_accidents++;
-
+            // Compte un nouvel accident uniquement quand l'ID ou l'année change
+            if(ligne.id_accident != dernier_id || ligne.annee != derniere_annee){
+               annees[index].nb_accidents++;
+               dernier_id = ligne.id_accident;
+               derniere_annee = ligne.annee;
+             }
             // La gravité va de 1 à 4. On gère l'indice du tableau (0 à 3)
             if (ligne.gravite >= 1 && ligne.gravite <= 4) {
                 annees[index].gravite[ligne.gravite - 1]++;
             }
         }
     }
+fclose(fichier);
+
+int choix = -1; 
+while(choix != 0){
+    printf("\nEntrez une année entre 2005 et 2024 (0 pour quitter) :")
+  
+
+
+
+
+
+
+
+  
 }
 
 
