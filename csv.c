@@ -19,6 +19,7 @@ int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee) {
         return 0; // Fin du fichier ou erreur
     }
 
+    //remplacer les sauts de ligne par '\0'
     ligne[strcspn(ligne, "\r\n")] = '\0';
 
     if (strncmp(ligne, "year", 4) == 0 || strlen(ligne) == 0) {
