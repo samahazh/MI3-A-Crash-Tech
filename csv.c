@@ -28,16 +28,16 @@ int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee) {
         }
 
         // Extraction des 9 données nécessaires
-        int resultat = sscanf(ligne, "%d;%d;%15[^;];%d;%d;%d;%d;%d;%d",
-                              &(donnee->annee),
-                              &(donnee->id_accident),
-                              donnee->id_vehicule,
-                              &(donnee->emplacement),
-                              &(donnee->type_usager),
-                              &(donnee->gravite),
-                              &(donnee->genre),
-                              &(donnee->annee_naissance),
-                              &(donnee->motif));
+        int resultat = sscanf(ligne, "%d;%15[^;];%15[^;];%d;%d;%d;%d;%d;%d",
+                      &(donnee->annee),
+                      donnee->id_accident,
+                      donnee->id_vehicule,
+                      &(donnee->emplacement),
+                      &(donnee->type_usager),
+                      &(donnee->gravite),
+                      &(donnee->genre),
+                      &(donnee->annee_naissance),
+                      &(donnee->motif));
 
         // Si les 9 données nécessaires ont été extraites, on retourne 1
         if (resultat == 9) {
