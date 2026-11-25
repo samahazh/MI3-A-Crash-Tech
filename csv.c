@@ -1,7 +1,14 @@
 #include "csv.h"
 
 FILE* ouvrir_fichier_csv(const char* nom_fichier){
-    FILE* f = fopen(nom
+    FILE* f = fopen(nom_fichier, "r");
+
+    if(f==NULL){
+        printf("Erreur: Impossible d'ouvrir le fichier %s\n", nom_fichier);
+        exit(1);
+    }
+
+    return f;
 }
 
 int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee) {
