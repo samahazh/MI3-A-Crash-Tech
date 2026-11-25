@@ -1,6 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "csv.h"
 
+int lire_ligne_csv(FILE* fichier, DonneesLigne* donnee) {
+    char ligne[256];
 
+  
+  
+}
